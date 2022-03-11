@@ -42,4 +42,4 @@ If you use this repo, please cite the following paper.
 
 **Acknowledgements**
 
-This code is built on top previous work from SNAP-Stanford. Check out their repo [here](https://github.com/snap-stanford/KGReasoning)
+This code is built on top of previous work from SNAP-Stanford. Check out their repo [here](https://github.com/snap-stanford/KGReasoning)
