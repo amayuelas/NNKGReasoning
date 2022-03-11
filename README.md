@@ -22,6 +22,9 @@ In this paper, we focus on answering multi-hop logical queries on Knowledge Grap
 
 You can find some examples on how to execute the code can be found on `examples.sh`
 
+**Data**
+To evalute the models, we have used standard evaluation datasets (FB15k, FB15k-237, NELL995) as in th BetaE paper. It can be downloaded [here](https://drive.google.com/drive/folders/1vCPaHL0RqksyVcaE_jFzpWIAe7DdeSzo?usp=sharing).
+
 **Citations**
 
 If you use this repo, please cite the following paper.
