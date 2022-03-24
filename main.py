@@ -172,7 +172,7 @@ def parse_args(args=None):
     parser.add_argument(
         "-nlayers",
         "--mlp_mode",
-        default=2,
+        default=1,
         type=int,
         help="Number of layers (before last) for the neural networs",
     )
