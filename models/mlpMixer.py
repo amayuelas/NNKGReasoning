@@ -5,17 +5,19 @@ import torch.nn.functional as F
 
 from models.mixer import MlpMixer
 
+
 class ProjectionMixer(nn.Module):
     def __init__(self, n_layers, entity_dim):
         super(ProjectionMixer, self).__init__()
-        self.mlpMixer = MlpMixer(patches=2,
-                                 feature_length=entity_dim,
-                                 num_classes=entity_dim,
-                                 num_blocks=2,
-                                 hidden_dim=200,
-                                 tokens_mlp_dim=200,
-                                 channels_mlp_dim=4
-                                 )
+        self.mlpMixer = MlpMixer(
+            patches=2,
+            feature_length=entity_dim,
+            num_classes=entity_dim,
+            num_blocks=3,
+            hidden_dim=20,
+            tokens_mlp_dim=200,
+            channels_mlp_dim=4,
+        )
 
     def forward(self, x1, x2):
         x1 = x1.unsqueeze(-1)
@@ -28,14 +30,15 @@ class ProjectionMixer(nn.Module):
 class AndMixer(nn.Module):
     def __init__(self, n_layers, entity_dim):
         super(AndMixer, self).__init__()
-        self.mlpMixer = MlpMixer(patches=2,
-                                 feature_length=entity_dim,
-                                 num_classes=entity_dim,
-                                 num_blocks=2,
-                                 hidden_dim=200,
-                                 tokens_mlp_dim=200,
-                                 channels_mlp_dim=4
-                                 )
+        self.mlpMixer = MlpMixer(
+            patches=2,
+            feature_length=entity_dim,
+            num_classes=entity_dim,
+            num_blocks=3,
+            hidden_dim=20,
+            tokens_mlp_dim=200,
+            channels_mlp_dim=4,
+        )
 
     def forward(self, x1, x2):
         x1 = x1.unsqueeze(-1)
@@ -48,14 +51,15 @@ class AndMixer(nn.Module):
 class OrMixer(nn.Module):
     def __init__(self, n_layers, entity_dim):
         super(OrMixer, self).__init__()
-        self.mlpMixer = MlpMixer(patches=2,
-                                 feature_length=entity_dim,
-                                 num_classes=entity_dim,
-                                 num_blocks=2,
-                                 hidden_dim=200,
-                                 tokens_mlp_dim=200,
-                                 channels_mlp_dim=4
-                                 )
+        self.mlpMixer = MlpMixer(
+            patches=2,
+            feature_length=entity_dim,
+            num_classes=entity_dim,
+            num_blocks=3,
+            hidden_dim=20,
+            tokens_mlp_dim=200,
+            channels_mlp_dim=4,
+        )
 
     def forward(self, x1, x2):
         x1 = x1.unsqueeze(-1)
